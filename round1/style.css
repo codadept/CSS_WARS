@@ -1,0 +1,114 @@
+*{
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(226, 43, 217);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main .antenna{
+  height: 30px;
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  top: 33%;
+  transform-origin: bottom;
+}
+
+main .antenna.left{
+  left: 48.5%;
+  animation: leftanimation 2s infinite linear;
+}
+
+main .antenna.right{
+  right: 48.5%;
+  animation: rightanimation 2s infinite linear;
+}
+
+@keyframes leftanimation {
+  0%{
+  transform: rotateZ(-10deg);
+  }
+  50%{
+    transform: rotateZ(10deg);
+  }
+  100%{
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes rightanimation {
+  0%{
+  transform: rotateZ(10deg);
+  }
+  50%{
+    transform: rotateZ(-10deg);
+  }
+  100%{
+    transform: rotateZ(10deg);
+  }
+}
+
+main .head{
+  height: 50px;
+  width: 70px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+main .head .face{
+  height: 60%;
+  width: 60%;
+  border-radius: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8%;
+}
+
+main .head .face .eyes{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+main .body{
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+main .hand{
+  height: 60px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+  top: 48%;
+}
+
+main .hand.left{
+  left: 44%;
+  border-radius: 60px 5px 60px 5px;
+}
+
+main .hand.right{
+  right: 44%;
+  border-radius: 5px 60px 5px 60px;
+}
